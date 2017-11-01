@@ -5,6 +5,7 @@
 %hook TPRevealingRingView
 
 -(void)layoutSubviews{
+    %orig;
     
     self.hidden = YES;      //Hide the overlay on the keypad buttons
     
