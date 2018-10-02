@@ -21,15 +21,10 @@
 - (void)layoutSubviews {
     %orig;
     //Hide the white UIViews around the keypad
-    UIView *_leftBlankView = MSHookIvar<UIView *>(self, "_leftBlankView");
-    UIView *_rightBlankView = MSHookIvar<UIView *>(self, "_rightBlankView");
-    UIView *_topBlankView = MSHookIvar<UIView *>(self, "_topBlankView");
-    UIView *_bottomBlankView = MSHookIvar<UIView *>(self, "_bottomBlankView");
-    _leftBlankView.hidden = YES;
-    _topBlankView.hidden = YES;
-    _bottomBlankView.hidden = YES;
-    _rightBlankView.hidden = YES;
-    
+  MSHookIvar<UIView *>(self, "_leftBlankView").hidden = YES;
+  MSHookIvar<UIView *>(self, "_rightBlankView").hidden = YE;
+  MSHookIvar<UIView *>(self, "_topBlankView").hidden = YES;
+  MSHookIvar<UIView *>(self, "_bottomBlankView").hidden = YES;
 }
 %end
 
